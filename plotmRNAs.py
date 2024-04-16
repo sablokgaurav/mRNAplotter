@@ -23,7 +23,7 @@ def plotmRNAs(inputgff, outfile):
     lengthestimates = []
     for i in range(len(mRNAplotterstart)):
         lengthestimates.append(mRNAplotterend[i]-mRNAplotterstart[i])
-    with open("/home/gaurav/Desktop/final_code_push/multicode.txt", "w") as writefile:
+    with open(outfile, "w") as writefile:
         writefile.write(f"These are the length estimates of the protein predicted\n")
         for i in range(len(read)):
             writefile.write(f"{mRNAplotterstart[i]}\t{mRNAplotterend[i]}\n")
